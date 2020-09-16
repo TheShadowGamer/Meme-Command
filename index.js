@@ -3,12 +3,17 @@ const { Plugin } = require("powercord/entities");
 
 module.exports = class MemeCmd extends Plugin {
   startPlugin() {
-    this.registerCommand("meme", [], "Send a random meme.", "{c}", () => {
-      let meme = randomMeme();
-      return {
-        send: true,
-        result: meme,
-      };
+    this.api.commands.registerCommand({
+      command: "meme",
+      description: "Send a random meme.",
+      usage: "{c}",
+      executor: () => {
+        let meme = randomMeme();
+        return {
+          send: true,
+          result: meme,
+        };
+      },
     });
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "Meme Command",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Adds a \"meme\" command that sends a random meme.",
   "author": "Liam The Snow Leopard#2501",
   "license": "MIT"
